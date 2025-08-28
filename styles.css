@@ -885,8 +885,18 @@ section {
 }
 
 .contact-icon {
-    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
     margin-top: 5px;
+    color: var(--gold);
+    stroke: var(--gold);
+    transition: all 0.3s var(--ease-elegant);
+}
+
+.contact-item:hover .contact-icon {
+    transform: scale(1.1);
+    color: var(--gold-dark);
+    stroke: var(--gold-dark);
 }
 
 .contact-text h4 {
