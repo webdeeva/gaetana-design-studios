@@ -517,7 +517,7 @@ class ServiceAnimations {
     }
 
     init() {
-        this.serviceItems.forEach((item, index) => {
+        this.serviceItems.forEach((item) => {
             item.addEventListener('mouseenter', () => this.animateServiceItem(item, true));
             item.addEventListener('mouseleave', () => this.animateServiceItem(item, false));
         });
@@ -583,6 +583,7 @@ document.addEventListener('DOMContentLoaded', () => {
     new FormHandler();
     new PortfolioEffects();
     new ServiceAnimations();
+    new GalleryModal();
     
     // Performance and UX
     new PerformanceOptimizer();
@@ -609,6 +610,101 @@ document.addEventListener('click', (e) => {
         smoothScroll(target);
     }
 });
+
+// Gallery Modal Functionality
+class GalleryModal {
+    constructor() {
+        this.modal = $('#modalGallery');
+        this.galleryGrid = $('#galleryGrid');
+        this.viewGalleryBtn = $('#viewGalleryBtn');
+        this.closeBtn = $('.close-modal');
+        this.portfolioImages = [
+            '2337981388151613118.jpeg',
+            '266706937842883201.jpeg',
+            '2811215451941797595.jpeg',
+            '2899694803114838815.jpeg',
+            '3107022993047447997.jpeg',
+            '325573408684039423.jpeg',
+            '3278730508646200448.jpeg',
+            '4181673808618620394.jpeg',
+            '4954269397816185614.jpeg',
+            '5030609287847244234.jpeg',
+            '561865407044652418.jpeg',
+            '6288900141446811822.jpeg',
+            '8385148339880567051.png',
+            '8541652109047992981.jpeg',
+            '8650548881317519188.jpeg',
+            '8949876354079694741.jpeg',
+            '9068023991299725090.jpeg'
+        ];
+        this.init();
+    }
+
+    init() {
+        this.loadGalleryImages();
+        this.bindEvents();
+    }
+
+    loadGalleryImages() {
+        const grid = document.getElementById('galleryGrid');
+        if (!grid) {
+            console.error('Gallery grid not found');
+            return;
+        }
+        
+        const galleryHTML = this.portfolioImages.map((image, index) => `
+            <div class="gallery-item">
+                <img src="public/portfolio/${image}" alt="Portfolio ${index + 1}" loading="lazy">
+            </div>
+        `).join('');
+        
+        grid.innerHTML = galleryHTML;
+        console.log('Gallery loaded with', this.portfolioImages.length, 'images');
+    }
+
+    bindEvents() {
+        // Open modal
+        if (this.viewGalleryBtn) {
+            this.viewGalleryBtn.addEventListener('click', () => this.openModal());
+        }
+
+        // Close modal
+        if (this.closeBtn) {
+            this.closeBtn.addEventListener('click', () => this.closeModal());
+        }
+
+        // Close on outside click
+        if (this.modal) {
+            this.modal.addEventListener('click', (e) => {
+                if (e.target === this.modal) {
+                    this.closeModal();
+                }
+            });
+        }
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.modal?.classList.contains('active')) {
+                this.closeModal();
+            }
+        });
+    }
+
+    openModal() {
+        if (this.modal) {
+            this.loadGalleryImages(); // Reload images when opening
+            this.modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    closeModal() {
+        if (this.modal) {
+            this.modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+}
 
 // Add custom cursor effect for luxury feel (optional)
 class LuxuryCursor {
