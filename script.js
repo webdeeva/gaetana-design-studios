@@ -614,10 +614,10 @@ document.addEventListener('click', (e) => {
 // Gallery Modal Functionality
 class GalleryModal {
     constructor() {
-        this.modal = $('#modalGallery');
-        this.galleryGrid = $('#galleryGrid');
-        this.viewGalleryBtn = $('#viewGalleryBtn');
-        this.closeBtn = $('.close-modal');
+        this.modal = document.getElementById('modalGallery');
+        this.galleryGrid = document.getElementById('galleryGrid');
+        this.viewGalleryBtn = document.getElementById('viewGalleryBtn');
+        this.closeBtn = document.querySelector('.close-modal');
         this.portfolioImages = [
             '2337981388151613118.jpeg',
             '266706937842883201.jpeg',
@@ -646,20 +646,30 @@ class GalleryModal {
     }
 
     loadGalleryImages() {
-        const grid = document.getElementById('galleryGrid');
-        if (!grid) {
+        if (!this.galleryGrid) {
             console.error('Gallery grid not found');
             return;
         }
         
-        const galleryHTML = this.portfolioImages.map((image, index) => `
-            <div class="gallery-item">
-                <img src="public/portfolio/${image}" alt="Portfolio ${index + 1}" loading="lazy">
-            </div>
-        `).join('');
+        // Use the correct path for images served from the web server
+        const pathPrefix = './public/portfolio/';
         
-        grid.innerHTML = galleryHTML;
+        const galleryHTML = this.portfolioImages.map((image, index) => {
+            return `
+                <div class="gallery-item">
+                    <img src="${pathPrefix}${image}" 
+                         alt="Portfolio ${index + 1}" 
+                         loading="lazy"
+                         onerror="console.error('Failed to load image:', this.src); this.style.display='none';">
+                </div>
+            `;
+        }).join('');
+        
+        this.galleryGrid.innerHTML = galleryHTML;
         console.log('Gallery loaded with', this.portfolioImages.length, 'images');
+        
+        // Debug: Test with first image to verify path works
+        console.log('Testing first image path:', pathPrefix + this.portfolioImages[0]);
     }
 
     bindEvents() {

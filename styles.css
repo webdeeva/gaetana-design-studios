@@ -186,7 +186,7 @@ p {
 /* Logo Block - Hangs over hero */
 .nav-logo {
     background: var(--black);
-    padding: 35px 50px;
+    padding: 0px;
     box-shadow: 0 10px 40px rgba(22, 22, 9, 0.3);
     transition: all 0.3s var(--ease-elegant);
     position: relative;
@@ -205,19 +205,19 @@ p {
 }
 
 .nav-logo .logo-img {
-    height: 100px;
+    height: 140px;
     width: auto;
     transition: all 0.3s var(--ease-elegant);
     filter: brightness(1.1);
 }
 
 .nav.scrolled .nav-logo {
-    padding: 20px 35px;
+    padding: 15px 30px;
     background: var(--black);
 }
 
 .nav.scrolled .nav-logo .logo-img {
-    height: 60px;
+    height: 80px;
 }
 
 .nav-logo .logo-img:hover {
@@ -315,115 +315,37 @@ p {
     background: var(--black);
 }
 
-/* Symmetrical Grid Hero Design */
-.hero-image-container {
+/* Hero Background with Fade In */
+.hero-background {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: var(--z-hero-slices);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 2px;
-    background: rgba(188, 156, 94, 0.2);
-    padding: 60px;
-}
-
-.hero-panel {
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    transform: scale(0.9);
-    animation: panelReveal 1s var(--ease-elegant) forwards;
-}
-
-.panel-bg {
-    position: absolute;
     width: 100%;
     height: 100%;
     background-image: url('room.png');
-    background-size: 400% 300%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    transition: all 0.5s var(--ease-elegant);
-}
-
-/* Create symmetrical pattern */
-.hero-panel:nth-child(1) { animation-delay: 0.1s; }
-.hero-panel:nth-child(1) .panel-bg { background-position: 10% 10%; }
-
-.hero-panel:nth-child(2) { animation-delay: 0.15s; }
-.hero-panel:nth-child(2) .panel-bg { background-position: 40% 10%; }
-
-.hero-panel:nth-child(3) { animation-delay: 0.15s; }
-.hero-panel:nth-child(3) .panel-bg { background-position: 60% 10%; transform: scaleX(-1); }
-
-.hero-panel:nth-child(4) { animation-delay: 0.1s; }
-.hero-panel:nth-child(4) .panel-bg { background-position: 90% 10%; transform: scaleX(-1); }
-
-/* Row 2 panels */
-.hero-panel:nth-child(5) { animation-delay: 0.2s; }
-.hero-panel:nth-child(5) .panel-bg { background-position: 10% 50%; }
-
-.hero-panel:nth-child(6) { animation-delay: 0.25s; }
-.hero-panel:nth-child(6) .panel-bg { background-position: 40% 50%; }
-
-.hero-panel:nth-child(7) { animation-delay: 0.25s; }
-.hero-panel:nth-child(7) .panel-bg { background-position: 60% 50%; transform: scaleX(-1); }
-
-.hero-panel:nth-child(8) { animation-delay: 0.2s; }
-.hero-panel:nth-child(8) .panel-bg { background-position: 90% 50%; transform: scaleX(-1); }
-
-/* Row 3 panels */
-.hero-panel:nth-child(9) { animation-delay: 0.3s; }
-.hero-panel:nth-child(9) .panel-bg { background-position: 10% 90%; }
-
-.hero-panel:nth-child(10) { animation-delay: 0.35s; }
-.hero-panel:nth-child(10) .panel-bg { background-position: 40% 90%; }
-
-.hero-panel:nth-child(11) { animation-delay: 0.35s; }
-.hero-panel:nth-child(11) .panel-bg { background-position: 60% 90%; transform: scaleX(-1); }
-
-.hero-panel:nth-child(12) { animation-delay: 0.3s; }
-.hero-panel:nth-child(12) .panel-bg { background-position: 90% 90%; transform: scaleX(-1); }
-
-/* Panel hover effect */
-.hero-panel::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--gradient-gold);
+    z-index: 1;
     opacity: 0;
-    transition: opacity 0.3s var(--ease-elegant);
-    mix-blend-mode: multiply;
+    animation: heroFadeIn 2s ease-out forwards;
+    filter: brightness(0.85);
 }
 
-.hero-panel:hover::after {
-    opacity: 0.2;
-}
-
-.hero-panel:hover .panel-bg {
-    transform: scale(1.05);
-}
-
-/* Panel reveal animation */
-@keyframes panelReveal {
+@keyframes heroFadeIn {
     0% {
         opacity: 0;
-        transform: scale(0.9) rotateX(10deg);
+        filter: blur(10px) brightness(0.6);
     }
     50% {
-        opacity: 0.7;
+        filter: blur(5px) brightness(0.75);
     }
     100% {
         opacity: 1;
-        transform: scale(1) rotateX(0);
+        filter: blur(0) brightness(0.85);
     }
 }
+
 
 .hero-overlay {
     position: absolute;
@@ -442,7 +364,7 @@ p {
     color: var(--white);
     max-width: 800px;
     padding: 0 20px;
-    animation: fadeInUp 1.5s var(--ease-elegant) 1s both;
+    animation: fadeInUp 1.5s var(--ease-elegant) 1.5s both;
 }
 
 .hero-title {
