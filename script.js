@@ -396,13 +396,27 @@ class FormHandler {
         submitBtn.disabled = true;
 
         try {
-            // Simulate form submission (replace with actual endpoint)
-            await this.simulateFormSubmission();
-            
-            // Show success message
-            this.showMessage('Thank you! We\'ll get back to you soon.', 'success');
+            const payload = {
+                name: this.form.querySelector('input[name="name"]').value,
+                email: this.form.querySelector('input[name="email"]').value,
+                phone: this.form.querySelector('input[name="phone"]').value,
+                projectType: this.form.querySelector('select[name="projectType"]').value,
+                message: this.form.querySelector('textarea[name="message"]').value,
+            };
+
+            const response = await fetch('https://hooks.zapier.com/hooks/catch/22985325/uhkn3fw/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            this.showMessage('Thank you! We'll get back to you soon.', 'success');
             this.form.reset();
-            
+
         } catch (error) {
             this.showMessage('Something went wrong. Please try again.', 'error');
         } finally {
@@ -410,12 +424,6 @@ class FormHandler {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }
-    }
-
-    simulateFormSubmission() {
-        return new Promise((resolve) => {
-            setTimeout(resolve, 2000);
-        });
     }
 
     showMessage(message, type) {
