@@ -414,7 +414,7 @@ class FormHandler {
                 throw new Error('Network response was not ok');
             }
 
-            this.showMessage('Thank you! We'll get back to you soon.', 'success');
+            this.showMessage("Thank you! We'll get back to you soon.", 'success');
             this.form.reset();
 
         } catch (error) {
