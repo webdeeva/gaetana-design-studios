@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Gallery - Gaetana Design Studios | Luxury Interior Design">
+    <title>Portfolio Gallery - Gaetana Design Studios</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery-hero {
+            padding: 180px 0 80px;
+            background: var(--beige-light);
+            text-align: center;
+        }
+        
+        .gallery-hero h1 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 3.5rem;
+        }
+        
+        .gallery-subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-medium);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .gallery-container {
+            padding: 80px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .gallery-full-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .gallery-full-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-elegant);
+            aspect-ratio: 1;
+            background: var(--beige-light);
+        }
+        
+        .gallery-full-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s var(--ease-elegant);
+        }
+        
+        .gallery-full-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(188, 156, 94, 0.3);
+        }
+        
+        .gallery-full-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(22, 22, 9, 0.9), transparent);
+            color: var(--white);
+            padding: 30px 20px 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s var(--ease-elegant);
+        }
+        
+        .gallery-full-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-project-title {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+        
+        .gallery-project-type {
+            color: var(--gold-light);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .gallery-full-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-full-grid {
+                gap: 20px;
+            }
+            
+            .gallery-container {
+                padding: 40px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="public/logo1.png" alt="Gaetana Design Studios" class="logo-img">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="portfolio-gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1>Portfolio Gallery</h1>
+            <p class="gallery-subtitle">
+                Explore our complete collection of luxury interior design projects, 
+                showcasing timeless elegance and sophisticated craftsmanship.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-container">
+        <div class="gallery-full-grid" id="galleryFullGrid">
+            <!-- Gallery items will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="glogo.png" alt="Gaetana Design Studios" class="footer-logo">
+                    <p class="footer-tagline">Creating Timeless Luxury Interiors</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link">
+                        <svg class="social-icon" viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Gaetana Design Studios. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery images data
+        const portfolioImages = [
+            { file: '2337981388151613118.jpeg', title: 'Modern Elegance', type: 'Living Space' },
+            { file: '266706937842883201.jpeg', title: 'Classic Luxury', type: 'Master Suite' },
+            { file: '2811215451941797595.jpeg', title: 'Contemporary Chic', type: 'Dining Room' },
+            { file: '2899694803114838815.jpeg', title: 'Timeless Beauty', type: 'Study Room' },
+            { file: '3107022993047447997.jpeg', title: 'Sophisticated Style', type: 'Bedroom' },
+            { file: '325573408684039423.jpeg', title: 'Urban Luxury', type: 'Penthouse' },
+            { file: '3278730508646200448.jpeg', title: 'Refined Comfort', type: 'Family Room' },
+            { file: '4181673808618620394.jpeg', title: 'Artistic Vision', type: 'Gallery Space' },
+            { file: '4954269397816185614.jpeg', title: 'Natural Harmony', type: 'Sunroom' },
+            { file: '5030609287847244234.jpeg', title: 'Coastal Elegance', type: 'Beach House' },
+            { file: '561865407044652418.jpeg', title: 'Metropolitan', type: 'City Apartment' },
+            { file: '6288900141446811822.jpeg', title: 'Grand Estate', type: 'Mansion' },
+            { file: '8385148339880567051.png', title: 'Boutique Hotel', type: 'Commercial' },
+            { file: '8541652109047992981.jpeg', title: 'Private Library', type: 'Study' },
+            { file: '8650548881317519188.jpeg', title: 'Wine Cellar', type: 'Specialty Room' },
+            { file: '8949876354079694741.jpeg', title: 'Executive Suite', type: 'Office' },
+            { file: '9068023991299725090.jpeg', title: 'Royal Chamber', type: 'Master Bedroom' }
+        ];
+
+        // Load gallery images
+        function loadGallery() {
+            const galleryGrid = document.getElementById('galleryFullGrid');
+            if (!galleryGrid) return;
+            
+            const galleryHTML = portfolioImages.map((image, index) => {
+                return `
+                    <div class="gallery-full-item">
+                        <img src="public/portfolio/${image.file}" 
+                             alt="${image.title}" 
+                             loading="lazy">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-project-title">${image.title}</h3>
+                            <p class="gallery-project-type">${image.type}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            galleryGrid.innerHTML = galleryHTML;
+        }
+
+        // Navigation functionality
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const nav = document.querySelector('.nav');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+        }
+
+        // Scroll navigation effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            loadGallery();
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

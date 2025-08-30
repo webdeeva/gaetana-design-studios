@@ -652,7 +652,7 @@ class GalleryModal {
         }
         
         // Use the correct path for images served from the web server
-        const pathPrefix = './public/portfolio/';
+        const pathPrefix = 'public/portfolio/';
         
         const galleryHTML = this.portfolioImages.map((image, index) => {
             return `
