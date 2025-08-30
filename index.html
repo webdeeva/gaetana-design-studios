@@ -251,16 +251,16 @@
                 <div class="contact-form">
                     <form class="form">
                         <div class="form-group">
-                            <input type="text" class="form-input" placeholder="Your Name" required>
+                            <input type="text" name="name" class="form-input" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-input" placeholder="Your Email" required>
+                            <input type="email" name="email" class="form-input" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-input" placeholder="Phone Number">
+                            <input type="tel" name="phone" class="form-input" placeholder="Phone Number">
                         </div>
                         <div class="form-group">
-                            <select class="form-select" required>
+                            <select name="projectType" class="form-select" required>
                                 <option value="">Project Type</option>
                                 <option value="residential">Residential Design</option>
                                 <option value="commercial">Commercial Space</option>
@@ -269,7 +269,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-textarea" placeholder="Tell us about your project..." rows="4" required></textarea>
+                            <textarea name="message" class="form-textarea" placeholder="Tell us about your project..." rows="4" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary btn-full">Schedule Consultation</button>
                     </form>
