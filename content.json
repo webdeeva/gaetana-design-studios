@@ -16,8 +16,8 @@
     "description": "Ready to transform your space into something extraordinary? Let's discuss your vision and create a bespoke design solution that exceeds your expectations.",
     "location": {
       "name": "Gaetana Design Studios",
-      "addressLine1": "18117 Biscayne BLVD",
-      "addressLine2": "Miami, FL 33160"
+      "addressLine1": "New York, NY",
+      "addressLine2": ""
     },
     "phone": "561-918-7918",
     "email": "gaetanadesignstudios@gmail.com"
@@ -28,10 +28,19 @@
       "description": "Gaetana Design Studios - Premium interior design services creating sophisticated and elegant spaces"
     },
     "hero": {
-      "titleLines": ["Luxury", "Interior Design"],
+      "titleLines": [
+        "Luxury",
+        "Interior Design"
+      ],
       "subtitle": "Creating sophisticated spaces that reflect your unique style and elevate your living experience",
-      "primaryButton": { "label": "View Portfolio", "href": "#portfolio" },
-      "secondaryButton": { "label": "Get Consultation", "href": "#contact" }
+      "primaryButton": {
+        "label": "View Portfolio",
+        "href": "#portfolio"
+      },
+      "secondaryButton": {
+        "label": "Get Consultation",
+        "href": "#contact"
+      }
     },
     "services": {
       "title": "Our Services",
@@ -58,9 +67,21 @@
       "title": "Featured Projects",
       "subtitle": "A showcase of our most prestigious interior design transformations",
       "items": [
-        { "image": "1.png", "title": "Classic Dining Room", "category": "Timeless Elegance" },
-        { "image": "2.png", "title": "Elegant Living Space", "category": "Sophisticated Comfort" },
-        { "image": "3.png", "title": "Master Bedroom Suite", "category": "Luxurious Retreat" }
+        {
+          "image": "1.png",
+          "title": "Classic Dining Room",
+          "category": "Timeless Elegance"
+        },
+        {
+          "image": "2.png",
+          "title": "Elegant Living Space",
+          "category": "Sophisticated Comfort"
+        },
+        {
+          "image": "3.png",
+          "title": "Master Bedroom Suite",
+          "category": "Luxurious Retreat"
+        }
       ]
     },
     "testimonials": {
@@ -106,16 +127,34 @@
       "title": "Our Approach",
       "description": "Every project begins with understanding you - your lifestyle, aspirations, and the emotions you want to experience in your space. We believe in collaborative design, where your vision and our expertise come together to create something truly extraordinary.",
       "steps": [
-        { "number": "01", "title": "Discovery", "description": "Understanding your vision, lifestyle, and aspirations" },
-        { "number": "02", "title": "Concept", "description": "Developing a unique design concept tailored to you" },
-        { "number": "03", "title": "Creation", "description": "Bringing your vision to life with meticulous attention" }
+        {
+          "number": "01",
+          "title": "Discovery",
+          "description": "Understanding your vision, lifestyle, and aspirations"
+        },
+        {
+          "number": "02",
+          "title": "Concept",
+          "description": "Developing a unique design concept tailored to you"
+        },
+        {
+          "number": "03",
+          "title": "Creation",
+          "description": "Bringing your vision to life with meticulous attention"
+        }
       ]
     },
     "cta": {
       "title": "Ready to Transform Your Space?",
       "description": "Let's collaborate to create an interior that reflects your unique style and elevates your daily experience.",
-      "primaryButton": { "label": "Start Your Project", "href": "index.html#contact" },
-      "secondaryButton": { "label": "View Portfolio", "href": "index.html#portfolio" }
+      "primaryButton": {
+        "label": "Start Your Project",
+        "href": "index.html#contact"
+      },
+      "secondaryButton": {
+        "label": "View Portfolio",
+        "href": "index.html#portfolio"
+      }
     }
   },
   "gallery": {
@@ -126,23 +165,91 @@
     "title": "Portfolio Gallery",
     "subtitle": "Explore our complete collection of luxury interior design projects, showcasing timeless elegance and sophisticated craftsmanship.",
     "items": [
-      { "file": "public/portfolio/2337981388151613118.jpeg", "title": "Modern Elegance", "type": "Living Space" },
-      { "file": "public/portfolio/266706937842883201.jpeg", "title": "Classic Luxury", "type": "Master Suite" },
-      { "file": "public/portfolio/2811215451941797595.jpeg", "title": "Contemporary Chic", "type": "Dining Room" },
-      { "file": "public/portfolio/2899694803114838815.jpeg", "title": "Timeless Beauty", "type": "Study Room" },
-      { "file": "public/portfolio/3107022993047447997.jpeg", "title": "Sophisticated Style", "type": "Bedroom" },
-      { "file": "public/portfolio/325573408684039423.jpeg", "title": "Urban Luxury", "type": "Penthouse" },
-      { "file": "public/portfolio/3278730508646200448.jpeg", "title": "Refined Comfort", "type": "Family Room" },
-      { "file": "public/portfolio/4181673808618620394.jpeg", "title": "Artistic Vision", "type": "Gallery Space" },
-      { "file": "public/portfolio/4954269397816185614.jpeg", "title": "Natural Harmony", "type": "Sunroom" },
-      { "file": "public/portfolio/5030609287847244234.jpeg", "title": "Coastal Elegance", "type": "Beach House" },
-      { "file": "public/portfolio/561865407044652418.jpeg", "title": "Metropolitan", "type": "City Apartment" },
-      { "file": "public/portfolio/6288900141446811822.jpeg", "title": "Grand Estate", "type": "Mansion" },
-      { "file": "public/portfolio/8385148339880567051.png", "title": "Boutique Hotel", "type": "Commercial" },
-      { "file": "public/portfolio/8541652109047992981.jpeg", "title": "Private Library", "type": "Study" },
-      { "file": "public/portfolio/8650548881317519188.jpeg", "title": "Wine Cellar", "type": "Specialty Room" },
-      { "file": "public/portfolio/8949876354079694741.jpeg", "title": "Executive Suite", "type": "Office" },
-      { "file": "public/portfolio/9068023991299725090.jpeg", "title": "Royal Chamber", "type": "Master Bedroom" }
+      {
+        "file": "public/portfolio/2337981388151613118.jpeg",
+        "title": "Modern Elegance",
+        "type": "Living Space"
+      },
+      {
+        "file": "public/portfolio/266706937842883201.jpeg",
+        "title": "Classic Luxury",
+        "type": "Master Suite"
+      },
+      {
+        "file": "public/portfolio/2811215451941797595.jpeg",
+        "title": "Contemporary Chic",
+        "type": "Dining Room"
+      },
+      {
+        "file": "public/portfolio/2899694803114838815.jpeg",
+        "title": "Timeless Beauty",
+        "type": "Study Room"
+      },
+      {
+        "file": "public/portfolio/3107022993047447997.jpeg",
+        "title": "Sophisticated Style",
+        "type": "Bedroom"
+      },
+      {
+        "file": "public/portfolio/325573408684039423.jpeg",
+        "title": "Urban Luxury",
+        "type": "Penthouse"
+      },
+      {
+        "file": "public/portfolio/3278730508646200448.jpeg",
+        "title": "Refined Comfort",
+        "type": "Family Room"
+      },
+      {
+        "file": "public/portfolio/4181673808618620394.jpeg",
+        "title": "Artistic Vision",
+        "type": "Gallery Space"
+      },
+      {
+        "file": "public/portfolio/4954269397816185614.jpeg",
+        "title": "Natural Harmony",
+        "type": "Sunroom"
+      },
+      {
+        "file": "public/portfolio/5030609287847244234.jpeg",
+        "title": "Coastal Elegance",
+        "type": "Beach House"
+      },
+      {
+        "file": "public/portfolio/561865407044652418.jpeg",
+        "title": "Metropolitan",
+        "type": "City Apartment"
+      },
+      {
+        "file": "public/portfolio/6288900141446811822.jpeg",
+        "title": "Grand Estate",
+        "type": "Mansion"
+      },
+      {
+        "file": "public/portfolio/8385148339880567051.png",
+        "title": "Boutique Hotel",
+        "type": "Commercial"
+      },
+      {
+        "file": "public/portfolio/8541652109047992981.jpeg",
+        "title": "Private Library",
+        "type": "Study"
+      },
+      {
+        "file": "public/portfolio/8650548881317519188.jpeg",
+        "title": "Wine Cellar",
+        "type": "Specialty Room"
+      },
+      {
+        "file": "public/portfolio/8949876354079694741.jpeg",
+        "title": "Executive Suite",
+        "type": "Office"
+      },
+      {
+        "file": "public/portfolio/9068023991299725090.jpeg",
+        "title": "Royal Chamber",
+        "type": "Master Bedroom"
+      }
     ]
   }
 }
