@@ -1,0 +1,148 @@
+{
+  "site": {
+    "name": "Gaetana Design Studios",
+    "logo": "public/logo1.png",
+    "footerLogo": "glogo.png",
+    "footerTagline": "Creating luxury spaces that inspire and elevate",
+    "copyright": "© 2024 Gaetana Design Studios. All rights reserved.",
+    "social": {
+      "instagram": "#",
+      "pinterest": "#",
+      "linkedin": "#"
+    }
+  },
+  "contact": {
+    "title": "Start Your Design Journey",
+    "description": "Ready to transform your space into something extraordinary? Let's discuss your vision and create a bespoke design solution that exceeds your expectations.",
+    "location": {
+      "name": "Gaetana Design Studios",
+      "addressLine1": "18117 Biscayne BLVD",
+      "addressLine2": "Miami, FL 33160"
+    },
+    "phone": "561-918-7918",
+    "email": "gaetanadesignstudios@gmail.com"
+  },
+  "home": {
+    "meta": {
+      "title": "Gaetana Design Studios - Luxury Interior Design",
+      "description": "Gaetana Design Studios - Premium interior design services creating sophisticated and elegant spaces"
+    },
+    "hero": {
+      "titleLines": ["Luxury", "Interior Design"],
+      "subtitle": "Creating sophisticated spaces that reflect your unique style and elevate your living experience",
+      "primaryButton": { "label": "View Portfolio", "href": "#portfolio" },
+      "secondaryButton": { "label": "Get Consultation", "href": "#contact" }
+    },
+    "services": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive interior design solutions tailored to your vision",
+      "items": [
+        {
+          "icon": "residential",
+          "title": "Residential Design",
+          "description": "Transform your home into a luxurious sanctuary with our bespoke residential design services."
+        },
+        {
+          "icon": "commercial",
+          "title": "Commercial Spaces",
+          "description": "Create inspiring work environments that enhance productivity and reflect your brand identity."
+        },
+        {
+          "icon": "consulting",
+          "title": "Luxury Consulting",
+          "description": "Expert guidance on high-end materials, finishes, and furnishings for the most discerning clients."
+        }
+      ]
+    },
+    "portfolio": {
+      "title": "Featured Projects",
+      "subtitle": "A showcase of our most prestigious interior design transformations",
+      "items": [
+        { "image": "1.png", "title": "Classic Dining Room", "category": "Timeless Elegance" },
+        { "image": "2.png", "title": "Elegant Living Space", "category": "Sophisticated Comfort" },
+        { "image": "3.png", "title": "Master Bedroom Suite", "category": "Luxurious Retreat" }
+      ]
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "subtitle": "What our clients say about their luxury design experience",
+      "items": [
+        {
+          "text": "Gaetana Design Studios transformed our home into a masterpiece. Their attention to detail and understanding of luxury design is unparalleled.",
+          "name": "Sarah Mitchell",
+          "role": "CEO, Mitchell Holdings"
+        },
+        {
+          "text": "The team's expertise in creating sophisticated commercial spaces helped elevate our brand image significantly. Exceptional work.",
+          "name": "David Chen",
+          "role": "Founder, Chen Enterprises"
+        },
+        {
+          "text": "Working with Gaetana was a dream. They understood our vision perfectly and delivered beyond our expectations.",
+          "name": "Elena Rodriguez",
+          "role": "Art Collector"
+        }
+      ]
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About - Gaetana Design Studios",
+      "description": "Meet the designer behind Gaetana Design Studios - Creating luxury interior spaces with passion and expertise"
+    },
+    "image": "./public/about.jpg",
+    "title": "Meet Gaetana",
+    "subtitle": "Principal Designer & Creative Director",
+    "paragraphs": [
+      "With over 15 years of experience in luxury interior design, Gaetana brings a unique blend of classical elegance and contemporary sophistication to every project. Her passion for creating extraordinary spaces has earned recognition from prestigious design publications and discerning clients worldwide.",
+      "Trained at the renowned Parsons School of Design and having worked alongside legendary designers in New York and Milan, Gaetana founded her studio with a vision to create interiors that are not just beautiful, but deeply personal and meaningful to those who inhabit them."
+    ],
+    "philosophy": {
+      "title": "Design Philosophy",
+      "quote": "True luxury lies not in ostentation, but in the perfect harmony of beauty, function, and emotion. Every space should tell a story, evoke feelings, and enhance the lives of those within it.",
+      "description": "At Gaetana Design Studios, we believe that exceptional interior design goes beyond aesthetics. It's about understanding the soul of a space and the dreams of its inhabitants. We craft environments that are timeless yet contemporary, sophisticated yet comfortable, luxurious yet livable."
+    },
+    "approach": {
+      "title": "Our Approach",
+      "description": "Every project begins with understanding you - your lifestyle, aspirations, and the emotions you want to experience in your space. We believe in collaborative design, where your vision and our expertise come together to create something truly extraordinary.",
+      "steps": [
+        { "number": "01", "title": "Discovery", "description": "Understanding your vision, lifestyle, and aspirations" },
+        { "number": "02", "title": "Concept", "description": "Developing a unique design concept tailored to you" },
+        { "number": "03", "title": "Creation", "description": "Bringing your vision to life with meticulous attention" }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Transform Your Space?",
+      "description": "Let's collaborate to create an interior that reflects your unique style and elevates your daily experience.",
+      "primaryButton": { "label": "Start Your Project", "href": "index.html#contact" },
+      "secondaryButton": { "label": "View Portfolio", "href": "index.html#portfolio" }
+    }
+  },
+  "gallery": {
+    "meta": {
+      "title": "Portfolio Gallery - Gaetana Design Studios",
+      "description": "Portfolio Gallery - Gaetana Design Studios | Luxury Interior Design"
+    },
+    "title": "Portfolio Gallery",
+    "subtitle": "Explore our complete collection of luxury interior design projects, showcasing timeless elegance and sophisticated craftsmanship.",
+    "items": [
+      { "file": "public/portfolio/2337981388151613118.jpeg", "title": "Modern Elegance", "type": "Living Space" },
+      { "file": "public/portfolio/266706937842883201.jpeg", "title": "Classic Luxury", "type": "Master Suite" },
+      { "file": "public/portfolio/2811215451941797595.jpeg", "title": "Contemporary Chic", "type": "Dining Room" },
+      { "file": "public/portfolio/2899694803114838815.jpeg", "title": "Timeless Beauty", "type": "Study Room" },
+      { "file": "public/portfolio/3107022993047447997.jpeg", "title": "Sophisticated Style", "type": "Bedroom" },
+      { "file": "public/portfolio/325573408684039423.jpeg", "title": "Urban Luxury", "type": "Penthouse" },
+      { "file": "public/portfolio/3278730508646200448.jpeg", "title": "Refined Comfort", "type": "Family Room" },
+      { "file": "public/portfolio/4181673808618620394.jpeg", "title": "Artistic Vision", "type": "Gallery Space" },
+      { "file": "public/portfolio/4954269397816185614.jpeg", "title": "Natural Harmony", "type": "Sunroom" },
+      { "file": "public/portfolio/5030609287847244234.jpeg", "title": "Coastal Elegance", "type": "Beach House" },
+      { "file": "public/portfolio/561865407044652418.jpeg", "title": "Metropolitan", "type": "City Apartment" },
+      { "file": "public/portfolio/6288900141446811822.jpeg", "title": "Grand Estate", "type": "Mansion" },
+      { "file": "public/portfolio/8385148339880567051.png", "title": "Boutique Hotel", "type": "Commercial" },
+      { "file": "public/portfolio/8541652109047992981.jpeg", "title": "Private Library", "type": "Study" },
+      { "file": "public/portfolio/8650548881317519188.jpeg", "title": "Wine Cellar", "type": "Specialty Room" },
+      { "file": "public/portfolio/8949876354079694741.jpeg", "title": "Executive Suite", "type": "Office" },
+      { "file": "public/portfolio/9068023991299725090.jpeg", "title": "Royal Chamber", "type": "Master Bedroom" }
+    ]
+  }
+}
