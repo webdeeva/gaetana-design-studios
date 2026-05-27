@@ -1,0 +1,12 @@
+{
+  "name": "gaetana-design-studios",
+  "version": "1.0.0",
+  "description": "Gaetana Design Studios marketing site — rendered from content.json",
+  "private": true,
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  }
+}

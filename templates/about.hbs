@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{about.meta.title}}</title>
+    <meta name="description" content="{{about.meta.description}}">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="{{about.image}}" as="image">
+
+    <!-- Google Fonts for luxury typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="{{site.logo}}" alt="{{site.name}}" class="logo-img">
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link active">About</a></li>
+                <li class="nav-item"><a href="index.html#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="index.html#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="portfolio-gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="index.html#testimonials" class="nav-link">Testimonials</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <div class="image-frame">
+                        <img src="{{about.image}}" alt="Gaetana - Interior Designer" class="designer-photo">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h1 class="about-title">{{about.title}}</h1>
+                    <h2 class="about-subtitle">{{about.subtitle}}</h2>
+{{#each about.paragraphs}}                    <p class="about-description">{{this}}</p>
+{{/each}}                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy">
+        <div class="container">
+            <div class="philosophy-content">
+                <div class="philosophy-text" data-aos="fade-up">
+                    <h2 class="section-title">{{about.philosophy.title}}</h2>
+                    <blockquote class="philosophy-quote">"{{about.philosophy.quote}}"</blockquote>
+                    <p class="philosophy-description">{{about.philosophy.description}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Approach Section -->
+    <section class="approach">
+        <div class="container">
+            <div class="approach-content">
+                <div class="approach-text" data-aos="fade-right">
+                    <h2 class="section-title">{{about.approach.title}}</h2>
+                    <p class="approach-description">{{about.approach.description}}</p>
+                    <div class="approach-steps">
+{{#each about.approach.steps}}                        <div class="step-item">
+                            <div class="step-number">{{this.number}}</div>
+                            <div class="step-content">
+                                <h4 class="step-title">{{this.title}}</h4>
+                                <p class="step-description">{{this.description}}</p>
+                            </div>
+                        </div>
+{{/each}}                    </div>
+                </div>
+                <div class="approach-visual" data-aos="fade-left">
+                    <div class="visual-element">
+                        <div class="golden-ratio"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2 class="cta-title">{{about.cta.title}}</h2>
+                <p class="cta-description">{{about.cta.description}}</p>
+                <div class="cta-buttons">
+                    <a href="{{about.cta.primaryButton.href}}" class="btn btn-primary">{{about.cta.primaryButton.label}}</a>
+                    <a href="{{about.cta.secondaryButton.href}}" class="btn btn-secondary">{{about.cta.secondaryButton.label}}</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{{> footer}}
+
+    <script src="script.js"></script>
+</body>
+</html>
